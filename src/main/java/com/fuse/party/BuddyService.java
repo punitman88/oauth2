@@ -1,6 +1,6 @@
-package com.fuse.service;
+package com.fuse.party;
 
-import com.fuse.model.Person;
+import com.fuse.person.Person;
 
 public interface BuddyService {
 

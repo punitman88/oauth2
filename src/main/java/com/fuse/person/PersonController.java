@@ -1,4 +1,4 @@
-package com.fuse.controller;
+package com.fuse.person;
 
 import java.security.Principal;
 import java.util.Collection;
@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fuse.model.Party;
-import com.fuse.model.Person;
-import com.fuse.repository.PersonRepository;
+import com.fuse.party.Party;
 
 @RestController
 @RequestMapping("/people")

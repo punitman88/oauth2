@@ -1,8 +1,6 @@
-package com.fuse.repository;
+package com.fuse.person;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.fuse.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 

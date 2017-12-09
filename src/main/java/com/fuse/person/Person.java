@@ -1,4 +1,4 @@
-package com.fuse.model;
+package com.fuse.person;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fuse.party.Party;
 
 @Entity
 @Table(name = "people")

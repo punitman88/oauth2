@@ -1,10 +1,10 @@
-package com.fuse.service;
+package com.fuse.party;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fuse.model.Person;
-import com.fuse.repository.PersonRepository;
+import com.fuse.person.Person;
+import com.fuse.person.PersonRepository;
 
 @Service
 public class DrinkingBuddyService implements BuddyService {

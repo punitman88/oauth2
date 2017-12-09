@@ -10,9 +10,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.fuse.controller.PersonController;
-import com.fuse.model.Person;
-import com.fuse.repository.PersonRepository;
+import com.fuse.person.Person;
+import com.fuse.person.PersonController;
+import com.fuse.person.PersonRepository;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

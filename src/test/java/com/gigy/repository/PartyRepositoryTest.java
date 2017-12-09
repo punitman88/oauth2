@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fuse.model.Party;
-import com.fuse.repository.PartyRepository;
+import com.fuse.party.Party;
+import com.fuse.party.PartyRepository;
 
 import static org.junit.Assert.assertEquals;
 

@@ -3,9 +3,9 @@ package com.gigy.service;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.fuse.model.Person;
-import com.fuse.repository.PersonRepository;
-import com.fuse.service.DrinkingBuddyService;
+import com.fuse.party.DrinkingBuddyService;
+import com.fuse.person.Person;
+import com.fuse.person.PersonRepository;
 
 import static org.mockito.Mockito.*;
 import static org.junit.Assert.assertEquals;

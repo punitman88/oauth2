@@ -1,4 +1,4 @@
-package com.fuse.model;
+package com.fuse.person;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.fuse.model;
+package com.fuse.party;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -15,6 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fuse.person.Person;
 
 @Entity
 @Table(name = "parties")
