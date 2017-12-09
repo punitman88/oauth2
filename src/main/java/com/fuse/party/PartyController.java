@@ -1,4 +1,4 @@
-package com.fuse.customer;
+package com.fuse.party;
 
 import java.util.Collection;
 
@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.fuse.party.Party;
-import com.fuse.party.PartyRepository;
 
 @RestController
 @RequestMapping("/parties")
