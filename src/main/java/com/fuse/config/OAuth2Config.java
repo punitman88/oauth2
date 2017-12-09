@@ -26,7 +26,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	private AuthenticationManager authenticationManager;
 
 	@Value("${fuse.oauth.tokenTimeout}")
-	private int expiration;
+	private String expiration;
 
 	@Value("${fuse.oauth.clientId}")
 	private String clientId;
@@ -47,7 +47,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient(clientId).secret(clientSecret).accessTokenValiditySeconds(expiration)
+		clients.inMemory().withClient(clientId).secret(clientSecret).accessTokenValiditySeconds(Integer.parseInt(expiration))
 				.scopes("read", "write").authorizedGrantTypes("password", "refresh_token").resourceIds("resource");
 	}
 
