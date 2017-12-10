@@ -1,4 +1,4 @@
-package com.fuse.customer;
+package com.fuse.login;
 
 import java.util.Collection;
 
@@ -12,35 +12,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/customers")
-public class CustomerController {
+@RequestMapping("/login")
+public class LoginController {
 
 	@Autowired
-	private CustomerService customerService;
+	private LoginService loginService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Collection<Login>> getCustomers() {
-		return new ResponseEntity<>(customerService.findAll(), HttpStatus.OK);
+	public ResponseEntity<Collection<Login>> getLogins() {
+		return new ResponseEntity<>(loginService.findAll(), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Login> getCustomer(@PathVariable String id) {
-		return new ResponseEntity<>(customerService.findOne(id), HttpStatus.OK);
+	public ResponseEntity<Login> getLogin(@PathVariable String id) {
+		return new ResponseEntity<>(loginService.findOne(id), HttpStatus.OK);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> addCustomer(@RequestBody Login customer) {
-		return new ResponseEntity<>(customerService.save(customer), HttpStatus.CREATED);
+	public ResponseEntity<?> addLogin(@RequestBody Login login) {
+		System.out.println("Hello " + login);
+		return new ResponseEntity<>(loginService.save(login), HttpStatus.CREATED);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<?> updateCustomer(@PathVariable String id, @RequestBody Login customer) {
-		return new ResponseEntity<>(customerService.updateAllFields(id, customer), HttpStatus.OK);
+	public ResponseEntity<?> updateLogin(@PathVariable String id, @RequestBody Login login) {
+		return new ResponseEntity<>(loginService.updateAllFields(id, login), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Void> deleteCustomer(@PathVariable String id) {
-		customerService.delete(id);
+	public ResponseEntity<Void> deleteLogin(@PathVariable String id) {
+		loginService.delete(id);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 

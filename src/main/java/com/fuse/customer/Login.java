@@ -2,17 +2,17 @@ package com.fuse.customer;
 
 import org.springframework.data.annotation.Id;
 
-public class Customer {
+public class Login {
 
 	@Id
 	private String id;
 	private String firstName;
 	private String lastName;
 
-	public Customer() {
+	public Login() {
 	}
 
-	public Customer(String firstName, String lastName) {
+	public Login(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
@@ -43,7 +43,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return String.format("Customer[id=%s, firstName='%s', lastName='%s']", id, firstName, lastName);
+		return String.format("Login[id=%s, firstName='%s', lastName='%s']", id, firstName, lastName);
 	}
 
 }

@@ -11,20 +11,24 @@ public class CustomerService {
 	@Autowired
 	CustomerRepository customerRepository;
 
-	public Collection<Customer> findAll() {
+	public Collection<Login> findAll() {
 		return this.customerRepository.findAll();
 	}
 
-	public Customer findOne(String id) {
+	public Login findOne(String id) {
 		return customerRepository.findOne(id);
 	}
 
-	public Customer save(Customer customer) {
+	public Login save(Login customer) {
 		return customerRepository.save(customer);
 	}
 
-	public Customer updateAllFields(String id, Customer customer) {
-		Customer customerToUpdate = customerRepository.findOne(id);
+	/*
+	 * WARNING!! If all the values are not provided during update, this might result
+	 * in inconsistent data
+	 */
+	public Login updateAllFields(String id, Login customer) {
+		Login customerToUpdate = customerRepository.findOne(id);
 		customerToUpdate.setFirstName(customer.getFirstName());
 		customerToUpdate.setLastName(customer.getLastName());
 		return customerRepository.save(customerToUpdate);
